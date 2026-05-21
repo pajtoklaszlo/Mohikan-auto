@@ -3,18 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohikán Autóalkatrész - Webshop</title>
+    <title>Mohikán Autóalkatrész - Zártkörű Webshop és Ingyenes Kiszállítás</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <link rel="icon" type="image/png" href="favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Speciális formázás a webshop település-listájához (SEO BARÁT) */
+        .seo-delivery-box {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background: rgba(106, 76, 140, 0.1);
+            border-left: 4px solid #6a4c8c;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        
+        .seo-delivery-box h4 {
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .seo-settlement-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+        }
+
+        .seo-settlement-list li {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(106, 76, 140, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px; 
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .seo-settlement-list li:hover {
+            background-color: #6a4c8c;
+            color: #ffffff;
+            border-color: #6a4c8c;
+            transform: translateY(-2px);
+        }
+
+        .request-access-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #a78bfa;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .request-access-link:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
-<body class="dark-theme">
+<body class="dark-theme webshop-page">
 
     <header>
         <div class="header-logo">MOHIKÁN AUTÓALKATRÉSZ</div>
@@ -25,27 +95,82 @@
         </nav>
     </header>
 
-    <main class="webshop-container">
-        <div class="webshop-card">
-            <div class="webshop-icon">
-                <i class="fa-solid fa-gears"></i>
-            </div>
-            <h1>ONLINE <span>ÁRUHÁZUNK</span></h1>
-            <h2>Fejlesztés alatt...</h2>
+    <main class="hero-section">
+        <div class="content-left">
+            <h1>ZÁRTKÖRŰ <span>WEBSHOP</span></h1>
             
-            <p class="webshop-text">
-                Gőzerővel dolgozunk azon, hogy hamarosan a teljes, több százezer darabos egri raktárkészletünket online is böngészhesse és megrendelhesse otthonról, kényelmesen.
+            <p class="intro-text">
+                Nem akarunk egy lenni a száz arctalan, országos webshop közül. Mi a saját régiónkban, a személyes és profi kiszolgálásban hiszünk. Webáruházunk zártkörű, kizárólag regisztrált partnereink és visszatérő vásárlóink számára érhető el. És hogy ez miért jó neked?
             </p>
-            
-            <div class="info-alert">
-                <i class="fa-solid fa-circle-info"></i>
-                <p><strong>Addig is keressen minket bizalommal elérhetőségeinken!</strong> Szakértő kollégáink telefonon és üzenetben is azonnal ellenőrzik a szükséges alkatrészeket, árakat és elérhetőséget.</p>
+
+            <ul class="about-list">
+                <li>
+                    <i class="fa-solid fa-tags"></i>
+                    <div>
+                        <span class="list-title">Garantáltan olcsóbb árak</span>
+                        <p>Mivel nem fizetünk drága országos logisztikát és futárszolgálatokat, a megspórolt költségeket egyből beépítjük az árainkba. Nálunk tényleg olcsóbban szerzed be az alkatrészt.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <span class="list-title">Ingyenes, saját autós kiszállítás</span>
+                        <p>A régión belül nem bízzuk másra a csomagodat. Saját autóinkkal, extra költségek nélkül, villámgyorsan visszük házhoz vagy a műhelyedbe a rendelést.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="seo-delivery-box">
+                <h4><i class="fa-solid fa-map-location-dot"></i> Ingyenes autóalkatrész kiszállítás az alábbi településeken:</h4>
+                <p class="sr-only">Autóalkatrész ingyenes kiszállítással a régióban. A Mohikán Autóalkatrész napi szinten, saját futárral szállít alkatrészeket az alábbi településekre gyorsan és pontosan.</p>
+                <ul class="seo-settlement-list">
+                    <li>3300 Eger</li>
+                    <li>3324 Felsőtárkány</li>
+                    <li>3304 Felnémet</li>
+                    <li>3325 Noszvaj</li>
+                    <li>3411 Szomolya</li>
+                    <li>3412 Bogács</li>
+                    <li>3395 Demjén</li>
+                    <li>3396 Kerecsend</li>
+                    <li>3350 Kál</li>
+                    <li>3355 Kápolna</li>
+                    <li>3356 Kompolt</li>
+                    <li>3353 Aldebrő</li>
+                    <li>3352 Feldebrő</li>
+                    <li>3373 Besenyőtelek</li>
+                    <li>3351 Verpelét</li>
+                    <li>3323 Szarvaskő</li>
+                    <li>3345 Mónosbél</li>
+                    <li>3344 Mikófalva</li>
+                    <li>3346 Bélapátfalva</li>
+                    <li>3343 Bekölce</li>
+                    <li>3348 Szilvásvárad</li>
+                    <li>3399 Andornaktálya</li>
+                    <li>3398 Nagytálya</li>
+                    <li>3397 Maklár</li>
+                    <li>3390 Füzesabony</li>
+                    <li>3377 Szihalom</li>
+                    <li>3400 Mezőkövesd</li>
+                    <li>3378 Mezőszemere</li>
+                    <li>3379 Egerfarmos</li>
+                    <li>3378 Mezőtárkány</li>
+                    <li>3394 Egerszalók</li>
+                </ul>
             </div>
 
-            <div class="webshop-actions">
-                <a href="kapcsolat.html" class="btn-primary">KAPCSOLAT ÉS AJÁNLATKÉRÉS</a>
-                <a href="tel:+36207474794" class="btn-secondary"><i class="fa-solid fa-phone"></i> HÍVÁS: +36 20 / 747-4794</a>
-            </div>
+            <p style="color: #ffffff; font-size: 1.1rem;">
+                Még nincs hozzáférésed a rendszerhez? 
+                <br>
+                <a href="kapcsolat.html" class="request-access-link">Kattints ide, vedd fel velünk a kapcsolatot, és igényelj regisztrációt!</a>
+            </p>
+        </div>
+        
+        <div class="content-right">
+            <div class="logo-sunlight"></div>
+            <a href="#" class="pulse-shop-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>BELÉPÉS A<br>WEBSHOPBA</span>
+            </a>
         </div>
     </main>
 
