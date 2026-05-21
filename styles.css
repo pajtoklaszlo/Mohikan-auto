@@ -168,3 +168,21 @@ body.light-theme {
     cursor: pointer;
     margin-top: 10px;
 }
+/* --- TÖBB ÜZLET MEGJELENÍTÉSE A KAPCSOLAT OLDALON --- */
+.store-location {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.store-location h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #6a4c8c; /* Mohikán lila, hogy kicsit feldobja a szöveget */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact-info ul {
+    margin-top: 0; /* Felülírjuk az előző beállítást, hogy szorosan a cím alatt legyen a lista */
+}
