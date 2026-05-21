@@ -11,6 +11,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Speciális formázás a webshop település-listájához */
+        .delivery-areas {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background: rgba(106, 76, 140, 0.1);
+            border-left: 4px solid #6a4c8c;
+            padding: 15px 20px;
+            border-radius: 4px;
+        }
+        .delivery-areas h4 {
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .delivery-areas p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .request-access-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #a78bfa;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .request-access-link:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body class="dark-theme webshop-page">
 
@@ -25,11 +61,40 @@
 
     <main class="hero-section">
         <div class="content-left">
-            <h1>WEBSHOP <span>BELÉPÉS</span></h1>
+            <h1>ZÁRTKÖRŰ <span>WEBSHOP</span></h1>
             
             <p class="intro-text">
-                [Ide kerül majd a webshop bemutatkozó szövege...] <br><br>
-                Fedezd fel a régió legszélesebb autóalkatrész kínálatát! Legyen szó kötelező szervizről, ritka típusokról vagy prémium kiegészítőkről, nálunk mindent megtalálsz egy helyen. Készülj fel a gyors és gördülékeny online vásárlásra!
+                Nem akarunk egy lenni a száz arctalan, országos webshop közül. Mi a saját régiónkban, a személyes és profi kiszolgálásban hiszünk. Webáruházunk zártkörű, kizárólag regisztrált partnereink és visszatérő vásárlóink számára érhető el. És hogy ez miért jó neked?
+            </p>
+
+            <ul class="about-list">
+                <li>
+                    <i class="fa-solid fa-tags"></i>
+                    <div>
+                        <span class="list-title">Garantáltan olcsóbb árak</span>
+                        <p>Mivel nem fizetünk drága országos logisztikát és futárszolgálatokat, a megspórolt költségeket egyből beépítjük az árainkba. Nálunk tényleg olcsóbban szerzed be az alkatrészt.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <span class="list-title">Ingyenes, saját autós kiszállítás</span>
+                        <p>A régión belül nem bízzuk másra a csomagodat. Saját autóinkkal, extra költségek nélkül, villámgyorsan visszük házhoz vagy a műhelyedbe a rendelést.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="delivery-areas">
+                <h4><i class="fa-solid fa-map-location-dot"></i> Ingyenes szállítási körzetünk:</h4>
+                <p>
+                    [Eger, Füzesabony, Ostoros, Andornaktálya, Maklár, Demjén... stb. - Ide jön a pontos lista, amiket megadsz!]
+                </p>
+            </div>
+
+            <p style="color: #ffffff; font-size: 1.1rem;">
+                Még nincs hozzáférésed a rendszerhez? 
+                <br>
+                <a href="kapcsolat.html" class="request-access-link">Kattints ide, vedd fel velünk a kapcsolatot, és igényelj regisztrációt!</a>
             </p>
         </div>
         
