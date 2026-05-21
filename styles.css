@@ -104,7 +104,6 @@ body.dark-theme {
     color: #6a4c8c;
 }
 
-/* KONTRAZT JAVÍTÁS: Tiszta fehér bevezető szöveg */
 .intro-text {
     font-size: 1.25rem;
     line-height: 1.7;
@@ -118,7 +117,6 @@ body.dark-theme {
     margin-bottom: 45px;
 }
 
-/* KONTRAZT JAVÍTÁS: Kicsit világosabb dobozok */
 .about-list li {
     display: flex;
     align-items: flex-start;
@@ -150,7 +148,6 @@ body.dark-theme {
     letter-spacing: 1px;
 }
 
-/* KONTRAZT JAVÍTÁS: Szinte tiszta fehér leíró szöveg */
 .about-list p {
     font-size: 1rem;
     line-height: 1.6;
@@ -178,7 +175,7 @@ body.dark-theme {
     box-shadow: 0 8px 20px rgba(106, 76, 140, 0.6);
 }
 
-/* --- VAGÁNY LOGÓ EFFEKTEK (ERŐSÍTVE!) --- */
+/* --- LOGÓ EFFEKTEK --- */
 .content-right {
     flex: 1;
     display: flex;
@@ -187,10 +184,9 @@ body.dark-theme {
     position: relative;
 }
 
-/* ERŐSEBB Napsütés effekt */
 .logo-sunlight {
     position: absolute;
-    width: 650px; /* Kicsit nagyobbra vettem a sugarát */
+    width: 650px;
     height: 650px;
     background: radial-gradient(circle, rgba(130, 80, 180, 0.5) 0%, rgba(106,76,140,0.15) 50%, rgba(0,0,0,0) 70%);
     top: 50%;
@@ -207,7 +203,6 @@ body.dark-theme {
     100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
-/* ERŐSEBB Logó ragyogás (Intenzív lebegés dupla árnyékkal) */
 .main-logo {
     width: 100%;
     max-width: 450px;
@@ -225,7 +220,6 @@ body.dark-theme {
     }
     50% { 
         transform: translateY(-20px); 
-        /* Brutális ragyogás a csúcsponton: dupla shadow! */
         box-shadow: 0 0 120px rgba(106, 76, 140, 1), 0 0 60px rgba(153, 102, 255, 0.6), inset 0 0 30px rgba(106, 76, 140, 0.6); 
     }
 }
@@ -350,4 +344,178 @@ body.light-theme {
     font-weight: 700;
     margin-bottom: 25px;
     color: #475569;
-    font-size: 1
+    font-size: 1.05rem;
+}
+
+.location-card .address i {
+    color: #6a4c8c;
+    margin-right: 5px;
+}
+
+.contact-detail {
+    margin-bottom: 20px;
+}
+
+.contact-detail .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-detail a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: color 0.2s;
+}
+
+.contact-detail a:hover {
+    color: #6a4c8c;
+}
+
+.contact-detail i {
+    color: #6a4c8c;
+    margin-right: 8px;
+    width: 20px;
+}
+
+.contact-detail p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.closed-tag {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 2px solid #6a4c8c;
+    color: #6a4c8c;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.map-btn:hover {
+    background-color: #6a4c8c;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(106, 76, 140, 0.2);
+}
+
+.map-btn i {
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden; 
+    border: 1px solid #e2e8f0;
+}
+
+.map-container iframe {
+    display: block; 
+}
+
+/* =========================================
+   3. FEHÉR BIZALOMÉPÍTŐ LÁBLÉC (FOOTER)
+   ========================================= */
+.quality-banner {
+    background-color: #ffffff; /* Új, hófehér háttér */
+    color: #0f172a; /* Sötét szöveg a világos háttéren */
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    text-align: center;
+    gap: 30px;
+    margin-top: auto; 
+    border-top: 4px solid #6a4c8c; 
+    position: relative;
+    z-index: 10;
+    /* Felfelé vetülő árnyék, hogy a sötét témán szebben váljon el */
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.3); 
+}
+
+.quality-item {
+    flex: 1;
+    max-width: 320px;
+}
+
+.banner-icon {
+    font-size: 40px; /* Kicsit nagyobb ikonok, hogy jól mutasson a fehéren */
+    color: #6a4c8c;
+    margin-bottom: 15px;
+}
+
+.quality-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    color: #111111; /* Erős fekete címsor */
+}
+
+.quality-item p {
+    font-size: 1rem;
+    color: #475569; /* Sötétszürke leírás */
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+/* --- Kisebb kijelzőkre (mobil) optimalizálás --- */
+@media (max-width: 900px) {
+    .locations-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location-card h3 {
+        white-space: normal; 
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+    .content-left {
+        max-width: 100%;
+    }
+    .about-list li {
+        text-align: left;
+    }
+    .content-right {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .quality-banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quality-item {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 15px 5%;
+    }
+    body {
