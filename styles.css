@@ -223,6 +223,52 @@ body.dark-theme {
     }
 }
 
+/* --- ÚJ: SÖTÉT JELLEGŰ SEO MÁRKASZEKCIÓ FORMÁZÁSA --- */
+.seo-brands-container {
+    padding: 40px 10%;
+    background-color: #151515; /* Nagyon finom sötét kontraszt háttér */
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.seo-brands-container h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: none; /* Letisztult kisbetűs írásmód */
+    letter-spacing: 0;
+}
+
+.seo-brands-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.seo-brands-list li {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(106, 76, 140, 0.15);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #94a3b8; /* Finomabb szürke szövegszín */
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Hover effekt: finom lila felvillanás és betű kivilágosodás */
+.seo-brands-list li:hover {
+    background-color: rgba(106, 76, 140, 0.2);
+    color: #ffffff;
+    border-color: #6a4c8c;
+    transform: translateY(-2px);
+}
+
 /* =========================================
    2. VILÁGOS TÉMA (KAPCSOLAT)
    ========================================= */
@@ -474,10 +520,9 @@ body.light-theme {
 }
 
 /* =========================================
-   4. ÚJ: WEBSHOP OLDAL SPECIFIKUS STÍLUSOK
+   4. WEBSHOP OLDAL SPECIFIKUS STÍLUSOK
    ========================================= */
 body.webshop-page {
-    /* Ütős autós/alkatrészes motorblokk háttérkép erős sötétítéssel */
     background-image: 
         linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.95)),
         url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=80');
@@ -486,7 +531,6 @@ body.webshop-page {
     background-attachment: fixed;
 }
 
-/* A hatalmas, kerek Webshop gomb, amely ugyanúgy pulzál */
 .pulse-shop-btn {
     display: flex;
     flex-direction: column;
@@ -501,7 +545,7 @@ body.webshop-page {
     text-decoration: none;
     position: relative;
     z-index: 2;
-    animation: floatIntense 4s ease-in-out infinite; /* Ugyanaz a brutál effekt */
+    animation: floatIntense 4s ease-in-out infinite; 
     transition: all 0.3s ease;
 }
 
@@ -520,7 +564,6 @@ body.webshop-page {
     line-height: 1.2;
 }
 
-/* Hover effekt a gombra (színcsere és ikon nagyítás) */
 .pulse-shop-btn:hover {
     background-color: #6a4c8c;
 }
