@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohikán Autóalkatrész</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Mohikán Autóalkatrész - Kik Vagyunk</title>
+    <link rel="stylesheet" href="styles.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="dark-theme">
 
-    <header>
-        <div class="header-logo">MORIKÁN</div>
+    <header class="header-dark">
+        <div class="header-logo">MOHIKÁN AUTÓALKATRÉSZ</div>
         <nav>
             <a href="index.html" class="active">KIK VAGYUNK</a>
             <a href="kapcsolat.html">KAPCSOLAT</a>
@@ -23,15 +25,61 @@
 
     <main class="hero-section">
         <div class="content-left">
-            <h1>KIK VAGYUNK</h1>
-            <p>A Mohikán Autóalkatrész 2014 óta megbízható partnere ügyfeleinek minőségi autóalkatrészek forgalmazásában.</p>
-            <a href="#" class="btn-primary">TOVÁBB</a>
+            <h1>KIK <span>VAGYUNK</span></h1>
+            
+            <p class="intro-text">
+                A Mohikán Autóalkatrésznél a kereskedelem számunkra nem csupán munka – ez a hivatásunk, amit hatalmas szívvel és egyfajta klasszikus, régivágású tisztelettel végzünk nap mint nap. 
+            </p>
+
+            <ul class="about-list">
+                <li>
+                    <i class="fa-solid fa-users-gear"></i>
+                    <div>
+                        <strong>A szakma igazi profijai</strong>
+                        <p>Mindkét egri üzletünkben tapasztalt "régi motorosokkal" találkozhatsz. Nálunk minden egyes kolléga legalább 10 éve van a pályán.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-gears"></i>
+                    <div>
+                        <strong>Megalkuvást nem tűrő szakmaiság</strong>
+                        <p>Kívülről fújjuk az alkatrészeket, és bátran állunk a leglehetetlenebbnek tűnő beszerzési kihívások elé is. Nem ismerünk lehetetlent.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <div>
+                        <strong>Ügyfélközpontúság szívből</strong>
+                        <p>Számunkra a legfontosabb, hogy minden ügyfelünket úgy szolgáljuk ki, ahogy azt mi is elvárnánk: gyorsan, pontosan és emberien.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="kapcsolat.html" class="btn-primary">IRÁNY A KAPCSOLAT OLDAL</a>
         </div>
         
         <div class="content-right">
             <img src="mohikan_logo.jpg" alt="Mohikán Logó" class="main-logo">
         </div>
     </main>
+
+    <footer class="quality-banner">
+        <div class="quality-item">
+            <div class="banner-icon"><i class="fa-solid fa-award"></i></div>
+            <h4>MINŐSÉG</h4>
+            <p>Ellenőrzött, prémium autóalkatrészek széles választékban.</p>
+        </div>
+        <div class="quality-item">
+            <div class="banner-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h4>GYORS KISZÁLLÍTÁS</h4>
+            <p>Rugalmas és villámgyors alkatrészellátás országosan.</p>
+        </div>
+        <div class="quality-item">
+            <div class="banner-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>MEGBÍZHATÓSÁG</h4>
+            <p>2014 óta az Önök biztos partnere az utakon.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
