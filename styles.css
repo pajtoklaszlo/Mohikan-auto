@@ -27,7 +27,7 @@ strong {
     font-weight: 600; 
 }
 
-/* --- VÉKONYABB RÖGZÍTETT FEHÉR FEJLÉC --- */
+/* --- VÉKONY RÖGZÍTETT FEHÉR FEJLÉC --- */
 header {
     position: fixed;
     top: 0;
@@ -70,7 +70,7 @@ nav a.active {
 }
 
 /* =========================================
-   1. SÖTÉT TÉMA (KIK VAGYUNK)
+   1. SÖTÉT TÉMA (KIK VAGYUNK & WEBSHOP ALAPOK)
    ========================================= */
 body.dark-theme {
     background-color: #1a1a1a; 
@@ -84,6 +84,8 @@ body.dark-theme {
     align-items: center;
     padding: 50px 10%;
     flex-grow: 1;
+    position: relative;
+    z-index: 5;
 }
 
 .content-left {
@@ -172,7 +174,7 @@ body.dark-theme {
     box-shadow: 0 8px 20px rgba(106, 76, 140, 0.6);
 }
 
-/* --- LOGÓ EFFEKTEK --- */
+/* --- LOGÓ & GOMB EFFEKTEK --- */
 .content-right {
     flex: 1;
     display: flex;
@@ -226,21 +228,19 @@ body.dark-theme {
    ========================================= */
 body.light-theme {
     background-color: #f8fafc;
-    /* Halvány tépett/merített papír textúra hozzáadása */
     background-image: url('https://www.transparenttextures.com/patterns/textured-paper.png');
     color: #0f172a;
     position: relative;
     overflow-x: hidden; 
 }
 
-/* KÖZÉPRE ZÁRT, HALVÁNY VÍZJEL LOGÓ */
 .bg-graphic {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
     height: 70vh;
-    opacity: 0.04; /* Nagyon finom, elegáns halványság */
+    opacity: 0.04; 
     filter: grayscale(100%); 
     z-index: 0;
     pointer-events: none;
@@ -255,10 +255,9 @@ body.light-theme {
     z-index: 5;
 }
 
-/* FINOMÍTOTT CÍMSOR VASTAGSÁG */
 .page-title {
-    font-size: 3.5rem; /* Kicsit visszafogottabb méret */
-    font-weight: 400; /* Letiltjuk a böngésző mesterséges "bold" effektjét */
+    font-size: 3.5rem; 
+    font-weight: 400; 
     letter-spacing: 3px;
     margin-bottom: 50px;
     text-align: center;
@@ -474,6 +473,63 @@ body.light-theme {
     font-weight: 600;
 }
 
+/* =========================================
+   4. ÚJ: WEBSHOP OLDAL SPECIFIKUS STÍLUSOK
+   ========================================= */
+body.webshop-page {
+    /* Ütős autós/alkatrészes motorblokk háttérkép erős sötétítéssel */
+    background-image: 
+        linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.95)),
+        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* A hatalmas, kerek Webshop gomb, amely ugyanúgy pulzál */
+.pulse-shop-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    background-color: #1a1a1a;
+    border: 5px solid #6a4c8c;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    animation: floatIntense 4s ease-in-out infinite; /* Ugyanaz a brutál effekt */
+    transition: all 0.3s ease;
+}
+
+.pulse-shop-btn i {
+    font-size: 70px;
+    color: #6a4c8c;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.pulse-shop-btn span {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Hover effekt a gombra (színcsere és ikon nagyítás) */
+.pulse-shop-btn:hover {
+    background-color: #6a4c8c;
+}
+
+.pulse-shop-btn:hover i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
 /* --- Kisebb kijelzőkre (mobil) optimalizálás --- */
 @media (max-width: 950px) {
     .locations-wrapper {
@@ -496,6 +552,13 @@ body.light-theme {
     }
     .content-right {
         justify-content: center;
+    }
+    .pulse-shop-btn {
+        width: 300px;
+        height: 300px;
+    }
+    .pulse-shop-btn span {
+        font-size: 1.6rem;
     }
     
     .quality-banner {
@@ -523,4 +586,15 @@ body.light-theme {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap:
+        gap: 10px;
+        height: auto;
+        padding: 10px 5%;
+    }
+    body {
+        padding-top: 100px; 
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
