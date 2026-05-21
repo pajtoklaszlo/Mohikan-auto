@@ -18,7 +18,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
+    /* Felül 90px (fejléc miatt), alul 80px (lábléc miatt) padding */
     padding-top: 90px; 
+    padding-bottom: 80px; 
 }
 
 /* --- RÖGZÍTETT FEJLÉC (FIXED HEADER) --- */
@@ -435,51 +437,56 @@ body.light-theme {
 }
 
 /* =========================================
-   3. FEHÉR BIZALOMÉPÍTŐ LÁBLÉC (FOOTER)
+   3. FEHÉR BIZALOMÉPÍTŐ LÁBLÉC (FIXED FOOTER)
    ========================================= */
 .quality-banner {
-    background-color: #ffffff; /* Új, hófehér háttér */
-    color: #0f172a; /* Sötét szöveg a világos háttéren */
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; 
+    color: #0f172a; 
     display: flex;
     justify-content: space-around;
-    padding: 50px 10%;
-    text-align: center;
-    gap: 30px;
-    margin-top: auto; 
-    border-top: 4px solid #6a4c8c; 
-    position: relative;
-    z-index: 10;
-    /* Felfelé vetülő árnyék, hogy a sötét témán szebben váljon el */
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.3); 
+    align-items: center; /* Függőlegesen középre zár */
+    padding: 12px 5%; /* Vékonyabb, elegánsabb padding */
+    z-index: 1000; 
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.15); 
+    border-top: 3px solid #6a4c8c;
 }
 
 .quality-item {
     flex: 1;
-    max-width: 320px;
+    display: flex;
+    align-items: center; /* Ikon és szöveg egymás mellé kerül */
+    justify-content: center;
+    gap: 15px; /* Távolság az ikon és a szöveg között */
 }
 
 .banner-icon {
-    font-size: 40px; /* Kicsit nagyobb ikonok, hogy jól mutasson a fehéren */
+    font-size: 28px; /* Kisebb, visszafogottabb ikon */
     color: #6a4c8c;
-    margin-bottom: 15px;
+}
+
+.quality-item-text {
+    text-align: left;
 }
 
 .quality-item h4 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-    color: #111111; /* Erős fekete címsor */
+    font-size: 1rem;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    color: #111111; 
 }
 
 .quality-item p {
-    font-size: 1rem;
-    color: #475569; /* Sötétszürke leírás */
-    line-height: 1.5;
+    font-size: 0.8rem;
+    color: #475569; 
     font-weight: 600;
 }
 
 /* --- Kisebb kijelzőkre (mobil) optimalizálás --- */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .locations-wrapper {
         flex-direction: column;
         align-items: center;
@@ -501,21 +508,26 @@ body.light-theme {
     .content-right {
         justify-content: center;
     }
-}
-
-@media (max-width: 768px) {
+    
+    /* Lábléc mobilon */
     .quality-banner {
-        flex-direction: column;
-        align-items: center;
+        padding: 10px 2%;
+        gap: 10px;
     }
     .quality-item {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-    header {
         flex-direction: column;
-        gap: 15px;
-        height: auto;
-        padding: 15px 5%;
+        gap: 5px;
     }
-    body {
+    .quality-item p {
+        display: none; /* Mobilon eltüntetjük a kis szöveget, hogy letisztult maradjon */
+    }
+    .quality-item-text {
+        text-align: center;
+    }
+    .banner-icon {
+        font-size: 20px;
+    }
+    .quality-item h4 {
+        font-size: 0.75rem;
+    }
+}
