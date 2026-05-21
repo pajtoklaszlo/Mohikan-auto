@@ -1,5 +1,5 @@
 /* =========================================
-   ÁLTALÁNOS BEÁLLÍTÁSOK (Minden aloldalra)
+   ÁLTALÁNOS BEÁLLÍTÁSOK
    ========================================= */
 * {
     margin: 0;
@@ -17,7 +17,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Szükséges ahhoz, hogy a footer az oldal alján maradjon */
+    flex-direction: column; 
 }
 
 /* --- FEJLÉC (HEADER) --- */
@@ -43,7 +43,7 @@ nav a {
 }
 
 /* =========================================
-   1. SÖTÉT TÉMA (KIK VAGYUNK - index.html)
+   1. SÖTÉT TÉMA (KIK VAGYUNK)
    ========================================= */
 body.dark-theme {
     background-color: #111111;
@@ -117,22 +117,21 @@ body.dark-theme nav a.active {
 }
 
 /* =========================================
-   2. VILÁGOS TÉMA (KAPCSOLAT - kapcsolat.html)
+   2. VILÁGOS TÉMA (KAPCSOLAT)
    ========================================= */
 body.light-theme {
-    background-color: #f8fafc; /* Modernebb, tiszta világos háttér */
+    background-color: #f8fafc;
     color: #0f172a;
     position: relative;
     overflow-x: hidden; 
 }
 
-/* Finomított, dögös háttér vízjel */
 .bg-graphic {
     position: fixed;
-    right: -100px; /* Beljebb húzva, hogy szépen látsszon az arcél */
+    right: -100px; 
     bottom: 15%;
     height: 75vh;
-    opacity: 0.05; /* Nagyon sejtelmes, elegáns vízjel effekt */
+    opacity: 0.05; 
     filter: grayscale(100%); 
     z-index: 0;
     pointer-events: none;
@@ -151,7 +150,6 @@ body.light-theme {
     border-bottom: 2px solid #0f172a;
 }
 
-/* Elrendezés és Cím */
 .contact-main {
     padding: 40px 10%;
     max-width: 1400px;
@@ -171,7 +169,6 @@ body.light-theme {
     transform: translateX(-50%);
 }
 
-/* Vagány lila alsó vonal a főcím alá */
 .page-title::after {
     content: '';
     position: absolute;
@@ -189,14 +186,14 @@ body.light-theme {
     margin-bottom: 60px;
 }
 
+/* ITT JAVÍTVA: Szélesebb lett a konténer (1100px helyett 1250px) */
 .locations-wrapper {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1250px; 
     display: flex;
     gap: 40px;
 }
 
-/* --- VAGÁNY LEBEGŐ KÁRTYÁK --- */
 .location-card {
     background-color: #ffffff;
     padding: 40px;
@@ -205,10 +202,9 @@ body.light-theme {
     flex: 1;
     border-top: 6px solid #6a4c8c; 
     position: relative;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Sima animáció */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
 
-/* Hover effekt: a kártya felemelkedik és nagyobb árnyékot kap */
 .location-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(106, 76, 140, 0.12);
@@ -230,10 +226,12 @@ body.light-theme {
     box-shadow: 0 5px 15px rgba(106, 76, 140, 0.3);
 }
 
+/* ITT JAVÍTVA: Kisebb betűméret (1.8rem helyett 1.6rem), hogy a hosszú cím kiférjen 1 sorba */
 .location-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem; 
     margin-bottom: 15px;
     color: #0f172a;
+    white-space: nowrap; /* Ez garantálja, hogy sosem törik két sorba! */
 }
 
 .location-card .address {
@@ -290,7 +288,6 @@ body.light-theme {
     font-weight: 700;
 }
 
-/* --- MODERNEBB TÉRKÉP GOMB --- */
 .map-btn {
     display: inline-block;
     margin-top: 10px;
@@ -332,18 +329,18 @@ body.light-theme {
 }
 
 /* =========================================
-   3. FEKETE BIZALOMÉPÍTŐ LÁBLÉC (FOOTER BANNER)
+   3. FEKETE BIZALOMÉPÍTŐ LÁBLÉC (FOOTER)
    ========================================= */
 .quality-banner {
-    background-color: #111111; /* Nyers fekete sáv */
+    background-color: #111111; 
     color: #ffffff;
     display: flex;
     justify-content: space-around;
     padding: 50px 10%;
     text-align: center;
     gap: 30px;
-    margin-top: auto; /* Mindig lent tartja az oldal alján */
-    border-top: 4px solid #6a4c8c; /* Lila felső él */
+    margin-top: auto; 
+    border-top: 4px solid #6a4c8c; 
     position: relative;
     z-index: 10;
 }
@@ -372,8 +369,18 @@ body.light-theme {
 }
 
 /* Kisebb kijelzőkre (mobil) optimalizálás */
+@media (max-width: 900px) {
+    .locations-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location-card h3 {
+        white-space: normal; /* Mobilon engedjük törni a sort */
+    }
+}
+
 @media (max-width: 768px) {
-    .locations-wrapper, .quality-banner {
+    .quality-banner {
         flex-direction: column;
         align-items: center;
     }
