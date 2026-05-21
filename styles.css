@@ -18,7 +18,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
-    /* Ez tolja le a tartalmat, hogy a rögzített fejléc ne takarja ki! */
     padding-top: 90px; 
 }
 
@@ -50,7 +49,6 @@ nav a {
     transition: all 0.3s ease;
 }
 
-/* Sötét és világos témájú fejlécek hátterei */
 .header-dark {
     background-color: #111111;
 }
@@ -64,7 +62,7 @@ nav a {
    1. SÖTÉT TÉMA (KIK VAGYUNK)
    ========================================= */
 body.dark-theme {
-    background-color: #1a1a1a; /* Világosabb fekete a jobb olvashatóságért */
+    background-color: #1a1a1a; 
     color: #ffffff;
     overflow-x: hidden;
 }
@@ -106,11 +104,12 @@ body.dark-theme {
     color: #6a4c8c;
 }
 
+/* KONTRAZT JAVÍTÁS: Tiszta fehér bevezető szöveg */
 .intro-text {
     font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: 35px;
-    color: #e2e8f0; /* Világosabb, jobban olvasható szürke */
+    color: #ffffff; 
     font-weight: 700;
 }
 
@@ -119,11 +118,12 @@ body.dark-theme {
     margin-bottom: 45px;
 }
 
+/* KONTRAZT JAVÍTÁS: Kicsit világosabb dobozok */
 .about-list li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.05); /* Kicsit világosabb háttér a doboznak */
+    background: rgba(255, 255, 255, 0.08); 
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #6a4c8c;
@@ -150,10 +150,11 @@ body.dark-theme {
     letter-spacing: 1px;
 }
 
+/* KONTRAZT JAVÍTÁS: Szinte tiszta fehér leíró szöveg */
 .about-list p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #cbd5e1; /* Tisztább szövegszín */
+    color: #f1f5f9; 
 }
 
 .btn-primary {
@@ -177,7 +178,7 @@ body.dark-theme {
     box-shadow: 0 8px 20px rgba(106, 76, 140, 0.6);
 }
 
-/* --- VAGÁNY LOGÓ EFFEKTEK --- */
+/* --- VAGÁNY LOGÓ EFFEKTEK (ERŐSÍTVE!) --- */
 .content-right {
     flex: 1;
     display: flex;
@@ -186,27 +187,27 @@ body.dark-theme {
     position: relative;
 }
 
-/* A "Napsütés" effekt */
+/* ERŐSEBB Napsütés effekt */
 .logo-sunlight {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(106,76,140,0.3) 0%, rgba(106,76,140,0.05) 50%, rgba(0,0,0,0) 70%);
+    width: 650px; /* Kicsit nagyobbra vettem a sugarát */
+    height: 650px;
+    background: radial-gradient(circle, rgba(130, 80, 180, 0.5) 0%, rgba(106,76,140,0.15) 50%, rgba(0,0,0,0) 70%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     border-radius: 50%;
     animation: pulseSun 3s infinite alternate;
-    pointer-events: none; /* Hogy ne akadályozza a kattintást */
+    pointer-events: none; 
 }
 
 @keyframes pulseSun {
-    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
-    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
-/* Maga a Logó (Intenzív lebegés) */
+/* ERŐSEBB Logó ragyogás (Intenzív lebegés dupla árnyékkal) */
 .main-logo {
     width: 100%;
     max-width: 450px;
@@ -220,16 +221,17 @@ body.dark-theme {
 @keyframes floatIntense {
     0%, 100% { 
         transform: translateY(0px); 
-        box-shadow: 0 0 40px rgba(106, 76, 140, 0.4); 
+        box-shadow: 0 0 60px rgba(106, 76, 140, 0.7); 
     }
     50% { 
         transform: translateY(-20px); 
-        box-shadow: 0 0 70px rgba(106, 76, 140, 0.8), inset 0 0 20px rgba(106, 76, 140, 0.3); 
+        /* Brutális ragyogás a csúcsponton: dupla shadow! */
+        box-shadow: 0 0 120px rgba(106, 76, 140, 1), 0 0 60px rgba(153, 102, 255, 0.6), inset 0 0 30px rgba(106, 76, 140, 0.6); 
     }
 }
 
 /* =========================================
-   2. VILÁGOS TÉMA (KAPCSOLAT - kapcsolat.html)
+   2. VILÁGOS TÉMA (KAPCSOLAT)
    ========================================= */
 body.light-theme {
     background-color: #f8fafc;
@@ -348,180 +350,4 @@ body.light-theme {
     font-weight: 700;
     margin-bottom: 25px;
     color: #475569;
-    font-size: 1.05rem;
-}
-
-.location-card .address i {
-    color: #6a4c8c;
-    margin-right: 5px;
-}
-
-.contact-detail {
-    margin-bottom: 20px;
-}
-
-.contact-detail .label {
-    display: block;
-    font-size: 0.8rem;
-    color: #94a3b8;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.contact-detail a {
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.15rem;
-    transition: color 0.2s;
-}
-
-.contact-detail a:hover {
-    color: #6a4c8c;
-}
-
-.contact-detail i {
-    color: #6a4c8c;
-    margin-right: 8px;
-    width: 20px;
-}
-
-.contact-detail p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #334155;
-}
-
-.closed-tag {
-    color: #ef4444;
-    font-weight: 700;
-}
-
-.map-btn {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 12px 24px;
-    background-color: transparent;
-    border: 2px solid #6a4c8c;
-    color: #6a4c8c;
-    text-decoration: none;
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    width: 100%;
-    text-align: center;
-}
-
-.map-btn:hover {
-    background-color: #6a4c8c;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(106, 76, 140, 0.2);
-}
-
-.map-btn i {
-    margin-left: 5px;
-    font-size: 0.85rem;
-}
-
-.map-container {
-    border-radius: 8px;
-    overflow: hidden; 
-    border: 1px solid #e2e8f0;
-}
-
-.map-container iframe {
-    display: block; 
-}
-
-/* =========================================
-   3. FEKETE BIZALOMÉPÍTŐ LÁBLÉC (FOOTER)
-   ========================================= */
-.quality-banner {
-    background-color: #111111; 
-    color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 10%;
-    text-align: center;
-    gap: 30px;
-    margin-top: auto; 
-    border-top: 4px solid #6a4c8c; 
-    position: relative;
-    z-index: 10;
-}
-
-.quality-item {
-    flex: 1;
-    max-width: 320px;
-}
-
-.banner-icon {
-    font-size: 36px;
-    color: #6a4c8c;
-    margin-bottom: 15px;
-}
-
-.quality-item h4 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-}
-
-.quality-item p {
-    font-size: 0.95rem;
-    color: #94a3b8;
-    line-height: 1.5;
-}
-
-/* Kisebb kijelzőkre (mobil) optimalizálás */
-@media (max-width: 900px) {
-    .locations-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    .location-card h3 {
-        white-space: normal; 
-    }
-    .hero-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 40px;
-    }
-    .content-left {
-        max-width: 100%;
-    }
-    .about-list li {
-        text-align: left;
-    }
-    .content-right {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .quality-banner {
-        flex-direction: column;
-        align-items: center;
-    }
-    .quality-item {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-    header {
-        flex-direction: column;
-        gap: 15px;
-        height: auto;
-        padding: 15px 5%;
-    }
-    body {
-        padding-top: 130px; 
-    }
-    nav a {
-        margin: 0 10px;
-    }
-}
+    font-size: 1
