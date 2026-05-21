@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohikán Autóalkatrész - Webshop</title>
+    <title>Mohikán Autóalkatrész - Zártkörű Webshop és Ingyenes Kiszállítás</title>
     <link rel="stylesheet" href="styles.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +13,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* Speciális formázás a webshop település-listájához */
-        .delivery-areas {
+        /* Speciális formázás a webshop település-listájához (SEO BARÁT) */
+        .seo-delivery-box {
             margin-top: 20px;
             margin-bottom: 40px;
             background: rgba(106, 76, 140, 0.1);
             border-left: 4px solid #6a4c8c;
-            padding: 15px 20px;
+            padding: 20px;
             border-radius: 4px;
         }
-        .delivery-areas h4 {
+        
+        .seo-delivery-box h4 {
             color: #ffffff;
             font-family: 'Open Sans', sans-serif;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.15rem;
+            margin-bottom: 15px;
             font-weight: 700;
         }
-        .delivery-areas p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            line-height: 1.6;
+
+        /* Rejtett szöveg a Google robotoknak a maximális Ads relevancia miatt */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
+
+        /* Települések dizájnos "Címke" (Tag) elrendezése */
+        .seo-settlement-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+        }
+
+        .seo-settlement-list li {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(106, 76, 140, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px; 
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .seo-settlement-list li:hover {
+            background-color: #6a4c8c;
+            color: #ffffff;
+            border-color: #6a4c8c;
+            transform: translateY(-2px);
+        }
+
         .request-access-link {
             display: inline-block;
             margin-top: 15px;
@@ -84,11 +121,44 @@
                 </li>
             </ul>
 
-            <div class="delivery-areas">
-                <h4><i class="fa-solid fa-map-location-dot"></i> Ingyenes szállítási körzetünk:</h4>
-                <p>
-                    [Eger, Füzesabony, Ostoros, Andornaktálya, Maklár, Demjén... stb. - Ide jön a pontos lista, amiket megadsz!]
-                </p>
+            <div class="seo-delivery-box">
+                <h4><i class="fa-solid fa-map-location-dot"></i> Ingyenes autóalkatrész kiszállítás az alábbi településeken:</h4>
+                
+                <p class="sr-only">Autóalkatrész ingyenes kiszállítással a régióban. A Mohikán Autóalkatrész napi szinten, saját futárral szállít alkatrészeket az alábbi településekre gyorsan és pontosan.</p>
+                
+                <ul class="seo-settlement-list">
+                    <li>3300 Eger</li>
+                    <li>3324 Felsőtárkány</li>
+                    <li>3304 Felnémet</li>
+                    <li>3325 Noszvaj</li>
+                    <li>3411 Szomolya</li>
+                    <li>3412 Bogács</li>
+                    <li>3395 Demjén</li>
+                    <li>3396 Kerecsend</li>
+                    <li>3350 Kál</li>
+                    <li>3355 Kápolna</li>
+                    <li>3356 Kompolt</li>
+                    <li>3353 Aldebrő</li>
+                    <li>3352 Feldebrő</li>
+                    <li>3373 Besenyőtelek</li>
+                    <li>3351 Verpelét</li>
+                    <li>3323 Szarvaskő</li>
+                    <li>3345 Mónosbél</li>
+                    <li>3344 Mikófalva</li>
+                    <li>3346 Bélapátfalva</li>
+                    <li>3343 Bekölce</li>
+                    <li>3348 Szilvásvárad</li>
+                    <li>3399 Andornaktálya</li>
+                    <li>3398 Nagytálya</li>
+                    <li>3397 Maklár</li>
+                    <li>3390 Füzesabony</li>
+                    <li>3377 Szihalom</li>
+                    <li>3400 Mezőkövesd</li>
+                    <li>3378 Mezőszemere</li>
+                    <li>3379 Egerfarmos</li>
+                    <li>3378 Mezőtárkány</li>
+                    <li>3394 Egerszalók</li>
+                </ul>
             </div>
 
             <p style="color: #ffffff; font-size: 1.1rem;">
