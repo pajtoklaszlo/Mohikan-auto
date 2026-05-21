@@ -1,368 +1,104 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* Alapbeállítások resetelése */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-scroll-behavior:smooth;
+/* Sötét háttér beállítása */
+body.dark-theme {
+    background-color: #111111; /* Sötét, majdnem fekete alap */
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
 }
 
-body{
-
-font-family:
-Arial;
-
-background:#111;
-
+/* Címsorok és menü betűtípusának beállítása (Vastag betűk) */
+h1, .header-logo, nav a {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-padding:
-
-30px
-80px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-z-index:99;
-
+/* --- FEJLÉC (HEADER) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
-.logo img{
-
-height:120px;
-
+.header-logo {
+    font-size: 24px;
 }
 
-nav{
-
-display:flex;
-
-gap:60px;
-
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    padding-bottom: 5px;
 }
 
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:900;
-
+nav a:hover {
+    color: #cccccc;
 }
 
-
-
-.hero{
-
-height:100vh;
-
-display:grid;
-
-grid-template-columns:
-
-45%
-55%;
-
-background:
-
-#070707;
-
+nav a.active {
+    border-bottom: 2px solid #ffffff; /* Fehér aláhúzás a tervezett Verzió A szerint */
 }
 
-
-
-.hero-left{
-
-padding:
-
-220px
-90px;
-
-color:white;
-
+/* --- FŐ TARTALOM (FLEXBOX ELRENDEZÉS) --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
 }
 
-
-
-.line{
-
-width:90px;
-
-height:5px;
-
-background:#8f60c7;
-
-margin-bottom:30px;
-
+.content-left {
+    flex: 1;
+    max-width: 450px; /* Ne legyen túl széles a szövegdoboz */
 }
 
-
-
-h1{
-
-font-size:120px;
-
-line-height:.9;
-
-margin-bottom:40px;
-
+.content-left h1 {
+    font-size: 5rem; /* Hatalmas betűméret a CÍMNEK */
+    line-height: 1;
+    margin-bottom: 20px;
 }
 
-
-
-.hero p{
-
-font-size:28px;
-
-max-width:420px;
-
-line-height:1.6;
-
+.content-left p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #dddddd;
 }
 
-
-
-.hero-right{
-
-position:relative;
-
+/* Lila gomb beállítása */
+.btn-primary {
+    display: inline-block;
+    background-color: #6a4c8c; /* Mohikán lila */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 2px;
 }
 
-
-
-.watermark{
-
-position:absolute;
-
-inset:0;
-
-background:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.1),
-rgba(0,0,0,.65)
-),
-
-url("mohikan_logo.jpg");
-
-background-size:
-
-80%;
-
-background-position:
-
-center;
-
-background-repeat:
-
-no-repeat;
-
-filter:
-
-grayscale(100%)
-brightness(.25);
-
-opacity:.8;
-
+.btn-primary:hover {
+    background-color: #553975; /* Kicsit sötétebb lila, ha ráviszed az egeret */
 }
 
-
-
-.btn,
-button{
-
-margin-top:40px;
-
-background:
-
-#8f60c7;
-
-color:white;
-
-border:none;
-
-padding:
-
-20px
-36px;
-
-font-weight:900;
-
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Jobbra tolja a logót */
 }
 
-
-
-.contact{
-
-background:
-
-#efefef;
-
-padding:
-
-160px
-100px;
-
-display:grid;
-
-grid-template-columns:
-
-1fr
-1fr;
-
-gap:100px;
-
-}
-
-
-
-.contact h2{
-
-font-size:80px;
-
-color:#6d3db1;
-
-margin-bottom:40px;
-
-}
-
-
-
-.contact p{
-
-margin-bottom:20px;
-
-font-size:22px;
-
-}
-
-
-
-input,
-textarea{
-
-width:100%;
-
-padding:18px;
-
-margin-bottom:20px;
-
-}
-
-
-
-textarea{
-
-height:180px;
-
-}
-
-
-
-.shop{
-
-background:
-
-white;
-
-padding:
-
-140px
-100px;
-
-display:grid;
-
-grid-template-columns:
-
-40%
-60%;
-
-align-items:center;
-
-}
-
-
-
-.shop h2{
-
-font-size:90px;
-
-color:#6d3db1;
-
-}
-
-
-
-.shop p{
-
-font-size:26px;
-
-margin:
-
-30px
-0;
-
-}
-
-
-
-.parts{
-
-height:420px;
-
-background:
-
-linear-gradient(
-135deg,
-#8f60c7,
-#eee
-);
-
-}
-
-
-
-footer{
-
-display:grid;
-
-grid-template-columns:
-
-1fr
-1fr
-1fr;
-
-background:
-
-#6d3db1;
-
-color:white;
-
-padding:
-
-40px;
-
-text-align:center;
-
-font-weight:900;
-
+.main-logo {
+    width: 100%;
+    max-width: 500px; /* Szabályozza, hogy mekkora legyen a logó */
+    border-radius: 50%; /* Opcionális, ha a kép sarkai látszanának */
 }
