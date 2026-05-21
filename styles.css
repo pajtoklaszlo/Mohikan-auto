@@ -174,7 +174,7 @@ body.dark-theme {
     box-shadow: 0 8px 20px rgba(106, 76, 140, 0.6);
 }
 
-/* --- LOGÓ & GOMB EFFEKTEK --- */
+/* --- LOGÓ EFFEKTEK --- */
 .content-right {
     flex: 1;
     display: flex;
@@ -223,7 +223,7 @@ body.dark-theme {
     }
 }
 
-/* --- ÚJ: SÖTÉT JELLEGŰ SEO MÁRKASZEKCIÓ FORMÁZÁSA --- */
+/* --- SEO MÁRKASZEKCIÓ FORMÁZÁSA --- */
 .seo-brands-container {
     padding: 40px 10%;
     background-color: #151515; 
@@ -368,4 +368,329 @@ body.light-theme {
     box-shadow: 0 5px 15px rgba(106, 76, 140, 0.3);
 }
 
-.location-
+.location-card h3 {
+    font-size: 1.6rem; 
+    margin-bottom: 15px;
+    color: #0f172a;
+    white-space: nowrap; 
+}
+
+.location-card .address {
+    font-weight: 600; 
+    margin-bottom: 25px;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.location-card .address i {
+    color: #6a4c8c;
+    margin-right: 5px;
+}
+
+.contact-detail {
+    margin-bottom: 20px;
+}
+
+.contact-detail .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600; 
+    margin-bottom: 5px;
+}
+
+.contact-detail a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600; 
+    font-size: 1.15rem;
+    transition: color 0.2s;
+}
+
+.contact-detail a:hover {
+    color: #6a4c8c;
+}
+
+.contact-detail i {
+    color: #6a4c8c;
+    margin-right: 8px;
+    width: 20px;
+}
+
+.contact-detail p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.closed-tag {
+    color: #ef4444;
+    font-weight: 600; 
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 2px solid #6a4c8c;
+    color: #6a4c8c;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.map-btn:hover {
+    background-color: #6a4c8c;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(106, 76, 140, 0.2);
+}
+
+.map-btn i {
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden; 
+    border: 1px solid #e2e8f0;
+}
+
+.map-container iframe {
+    display: block; 
+}
+
+/* =========================================
+   3. FEHÉR BIZALOMÉPÍTŐ LÁBLÉC (FIXED FOOTER)
+   ========================================= */
+.quality-banner {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; 
+    color: #0f172a; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 12px 5%; 
+    z-index: 1000; 
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.15); 
+    border-top: 3px solid #6a4c8c;
+}
+
+.quality-item {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 15px; 
+}
+
+.banner-icon {
+    font-size: 28px; 
+    color: #6a4c8c;
+}
+
+.quality-item-text {
+    text-align: left;
+}
+
+.quality-item h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    color: #111111; 
+}
+
+.quality-item p {
+    font-size: 0.8rem;
+    color: #475569; 
+    font-weight: 600;
+}
+
+/* =========================================
+   4. WEBSHOP OLDAL SPECIFIKUS STÍLUSOK
+   ========================================= */
+body.webshop-page {
+    background-image: 
+        linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.95)),
+        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pulse-shop-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    background-color: #1a1a1a;
+    border: 5px solid #6a4c8c;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    animation: floatIntense 4s ease-in-out infinite; 
+    transition: all 0.3s ease;
+}
+
+.pulse-shop-btn i {
+    font-size: 70px;
+    color: #6a4c8c;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.pulse-shop-btn span {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.pulse-shop-btn:hover {
+    background-color: #6a4c8c;
+}
+
+.pulse-shop-btn:hover i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* =========================================
+   5. LEBEGŐ FACEBOOK GOMB
+   ========================================= */
+.floating-fb-btn {
+    position: fixed;
+    bottom: 100px; 
+    right: 30px;
+    background-color: #1877F2; 
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    z-index: 999;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.6);
+    animation: pulseFb 2s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-fb-btn i {
+    font-size: 22px;
+}
+
+.floating-fb-btn:hover {
+    background-color: #166fe5;
+    color: #ffffff;
+    transform: scale(1.05) translateY(-5px);
+    animation: none; 
+    box-shadow: 0 10px 25px rgba(24, 119, 242, 0.8);
+}
+
+@keyframes pulseFb {
+    0% { box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(24, 119, 242, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(24, 119, 242, 0); }
+}
+
+/* --- Kisebb kijelzőkre (mobil) optimalizálás --- */
+@media (max-width: 950px) {
+    .locations-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location-card h3 {
+        white-space: normal; 
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+    .content-left {
+        max-width: 100%;
+    }
+    .about-list li {
+        text-align: left;
+    }
+    .content-right {
+        justify-content: center;
+    }
+    .pulse-shop-btn {
+        width: 300px;
+        height: 300px;
+    }
+    .pulse-shop-btn span {
+        font-size: 1.6rem;
+    }
+    
+    .quality-banner {
+        padding: 10px 2%;
+        gap: 10px;
+    }
+    .quality-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .quality-item p {
+        display: none; 
+    }
+    .quality-item-text {
+        text-align: center;
+    }
+    .banner-icon {
+        font-size: 20px;
+    }
+    .quality-item h4 {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 10px 5%;
+    }
+    body {
+        padding-top: 100px; 
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .floating-fb-btn {
+        bottom: 90px;
+        right: 15px;
+        padding: 12px 16px;
+        border-radius: 50%; 
+    }
+    .floating-fb-btn .fb-text {
+        display: none; 
+    }
+    .floating-fb-btn i {
+        margin: 0;
+    }
+}
