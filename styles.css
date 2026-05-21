@@ -48,6 +48,7 @@ nav a {
 body.dark-theme {
     background-color: #111111;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 .header-dark .header-logo,
@@ -73,7 +74,7 @@ body.dark-theme {
 
 .content-left {
     flex: 1;
-    max-width: 550px; /* Picit szélesebb lett, hogy jól kiférjen a szöveg */
+    max-width: 550px; 
 }
 
 .content-left h1 {
@@ -83,7 +84,7 @@ body.dark-theme {
 }
 
 .content-left h1 span {
-    color: #6a4c8c; /* Vagány lila kiemelés a címsorban */
+    color: #6a4c8c;
 }
 
 .intro-text {
@@ -94,7 +95,6 @@ body.dark-theme {
     font-weight: 700;
 }
 
-/* --- Új dizájn elemek a "Kik Vagyunk" listához --- */
 .about-list {
     list-style: none;
     margin-bottom: 40px;
@@ -104,7 +104,7 @@ body.dark-theme {
     display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.03); /* Nagyon finom sötétszürke doboz */
+    background: rgba(255, 255, 255, 0.03); 
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #6a4c8c;
@@ -132,18 +132,7 @@ body.dark-theme {
     color: #94a3b8;
 }
 
-.content-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-logo {
-    width: 100%;
-    max-width: 450px;
-    filter: drop-shadow(0 0 30px rgba(106, 76, 140, 0.2)); /* Finom lila ragyogás a kerek logó mögött */
-}
-
+/* Gomb */
 .btn-primary {
     display: inline-block;
     background-color: #6a4c8c;
@@ -161,6 +150,51 @@ body.dark-theme {
 .btn-primary:hover {
     background-color: #553975;
     transform: translateY(-3px);
+}
+
+/* --- VAGÁNY LOGÓ EFFEKTEK --- */
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 450px;
+    /* Kivágja a szögletes fehér hátteret egy tökéletes körré: */
+    border-radius: 50%; 
+    /* Adunk neki egy lila keretet: */
+    border: 3px solid #6a4c8c;
+    /* Brutális pulzáló lila árnyék: */
+    box-shadow: 0 0 50px rgba(106, 76, 140, 0.4), inset 0 0 20px rgba(106, 76, 140, 0.3);
+    /* Lebegő animáció alkalmazása: */
+    animation: floatLogo 4s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+/* A lebegés logikája */
+@keyframes floatLogo {
+    0% { transform: translateY(0px); box-shadow: 0 0 50px rgba(106, 76, 140, 0.4); }
+    50% { transform: translateY(-15px); box-shadow: 0 0 80px rgba(106, 76, 140, 0.7); }
+    100% { transform: translateY(0px); box-shadow: 0 0 50px rgba(106, 76, 140, 0.4); }
+}
+
+/* Mögöttes finom lila derítés */
+.content-right::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(106,76,140,0.15) 0%, rgba(0,0,0,0) 65%);
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 50%;
 }
 
 /* =========================================
@@ -432,6 +466,9 @@ body.light-theme {
     }
     .about-list li {
         text-align: left;
+    }
+    .content-right::before {
+        display: none;
     }
 }
 
