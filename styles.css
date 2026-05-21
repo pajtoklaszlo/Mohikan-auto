@@ -1,5 +1,5 @@
 /* =========================================
-   ÁLTALÁNOS BEÁLLÍTÁSOK (Minden oldalra)
+   ÁLTALÁNOS BEÁLLÍTÁSOK
    ========================================= */
 * {
     margin: 0;
@@ -162,14 +162,14 @@ body.light-theme {
 /* Flexbox ami a kártyákat középre igazítja */
 .contact-layout {
     display: flex;
-    justify-content: center; /* Mivel nincs űrlap, ez teszi középre a kártyákat */
+    justify-content: center; 
     align-items: flex-start;
 }
 
 /* Üzletek kártyái */
 .locations-wrapper {
     width: 100%;
-    max-width: 1000px; /* Ne nyúljanak el a kártyák a végtelenségig a nagy monitorokon */
+    max-width: 1000px;
     display: flex;
     gap: 40px;
 }
