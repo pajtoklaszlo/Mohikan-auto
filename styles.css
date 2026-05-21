@@ -43,23 +43,24 @@ nav a {
 }
 
 /* =========================================
-   1. SÖTÉT TÉMA (KIK VAGYUNK)
+   1. SÖTÉT TÉMA (KIK VAGYUNK - index.html)
    ========================================= */
 body.dark-theme {
     background-color: #111111;
     color: #ffffff;
 }
 
-body.dark-theme nav a {
+.header-dark .header-logo,
+.header-dark nav a {
     color: #ffffff;
 }
 
-body.dark-theme nav a:hover {
-    color: #cccccc;
+.header-dark nav a:hover {
+    color: #a78bfa;
 }
 
-body.dark-theme nav a.active {
-    border-bottom: 2px solid #ffffff;
+.header-dark nav a.active {
+    border-bottom: 2px solid #6a4c8c;
 }
 
 .hero-section {
@@ -72,20 +73,63 @@ body.dark-theme nav a.active {
 
 .content-left {
     flex: 1;
-    max-width: 450px;
+    max-width: 550px; /* Picit szélesebb lett, hogy jól kiférjen a szöveg */
 }
 
 .content-left h1 {
     font-size: 5rem;
-    line-height: 1;
-    margin-bottom: 20px;
+    line-height: 0.9;
+    margin-bottom: 30px;
 }
 
-.content-left p {
-    font-size: 15px;
-    line-height: 1.6;
+.content-left h1 span {
+    color: #6a4c8c; /* Vagány lila kiemelés a címsorban */
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
     margin-bottom: 30px;
-    color: #dddddd;
+    color: #e2e8f0;
+    font-weight: 700;
+}
+
+/* --- Új dizájn elemek a "Kik Vagyunk" listához --- */
+.about-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.about-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.03); /* Nagyon finom sötétszürke doboz */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #6a4c8c;
+}
+
+.about-list i {
+    color: #6a4c8c;
+    font-size: 24px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.about-list strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+
+.about-list p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #94a3b8;
 }
 
 .content-right {
@@ -96,28 +140,31 @@ body.dark-theme nav a.active {
 
 .main-logo {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
+    filter: drop-shadow(0 0 30px rgba(106, 76, 140, 0.2)); /* Finom lila ragyogás a kerek logó mögött */
 }
 
 .btn-primary {
     display: inline-block;
     background-color: #6a4c8c;
     color: white;
-    padding: 12px 30px;
+    padding: 16px 35px;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 2px;
-    transition: background-color 0.3s;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 .btn-primary:hover {
     background-color: #553975;
+    transform: translateY(-3px);
 }
 
 /* =========================================
-   2. VILÁGOS TÉMA (KAPCSOLAT)
+   2. VILÁGOS TÉMA (KAPCSOLAT - kapcsolat.html)
    ========================================= */
 body.light-theme {
     background-color: #f8fafc;
@@ -186,7 +233,6 @@ body.light-theme {
     margin-bottom: 60px;
 }
 
-/* ITT JAVÍTVA: Szélesebb lett a konténer (1100px helyett 1250px) */
 .locations-wrapper {
     width: 100%;
     max-width: 1250px; 
@@ -226,12 +272,11 @@ body.light-theme {
     box-shadow: 0 5px 15px rgba(106, 76, 140, 0.3);
 }
 
-/* ITT JAVÍTVA: Kisebb betűméret (1.8rem helyett 1.6rem), hogy a hosszú cím kiférjen 1 sorba */
 .location-card h3 {
     font-size: 1.6rem; 
     margin-bottom: 15px;
     color: #0f172a;
-    white-space: nowrap; /* Ez garantálja, hogy sosem törik két sorba! */
+    white-space: nowrap; 
 }
 
 .location-card .address {
@@ -375,7 +420,18 @@ body.light-theme {
         align-items: center;
     }
     .location-card h3 {
-        white-space: normal; /* Mobilon engedjük törni a sort */
+        white-space: normal; 
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+    .content-left {
+        max-width: 100%;
+    }
+    .about-list li {
+        text-align: left;
     }
 }
 
