@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohikán Autóalkatrész - Kapcsolat (Verzió A)</title>
+    <title>Mohikán Autóalkatrész - Kapcsolat</title>
     <link rel="stylesheet" href="styles.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-grunge-theme"> <header class="header-light">
+<body class="light-theme">
+
+    <img src="mohikan_logo.jpg" alt="Háttér grafika" class="bg-graphic">
+
+    <header class="header-light">
         <div class="header-logo">MORIKÁN</div>
         <nav>
             <a href="index.html">KIK VAGYUNK</a>
@@ -19,58 +23,66 @@
         </nav>
     </header>
 
-    <main class="hero-section">
-        <div class="content-left contact-info">
-            <h1>KAPCSOLAT</h1>
+    <main class="contact-main">
+        <h1 class="page-title">KAPCSOLAT</h1>
+        
+        <div class="contact-layout">
             
-            <div class="store-location">
-                <h3>Eger, Kistályai úti Üzlet</h3>
-                <ul>
-                    <li><strong>📍</strong> 3300 Eger Kistályai út 18.</li>
-                    <li><strong>📞</strong> 06 20 / 747 - 4794</li>
-                    <li><strong>✉️</strong> mhk1@mhkauto.hu</li>
-                    <li><strong>🕒</strong> H-P 8:00 - 17:00 (SZ-V: Zárva)</li>
-                </ul>
+            <div class="locations-wrapper">
+                
+                <div class="location-card">
+                    <h3>I. Kistályai úti Üzlet</h3>
+                    <p class="address">📍 3300 Eger, Kistályai út 18.</p>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Telefon:</span>
+                        <a href="tel:+36207474794">06 20 / 747 - 4794</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Email:</span>
+                        <a href="mailto:mhk1@mhkauto.hu">mhk1@mhkauto.hu</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Nyitvatartás:</span>
+                        <p>H-P: 8:00 - 17:00<br>SZ-V: Zárva</p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>II. Harangláb utcai Üzlet</h3>
+                    <p class="address">📍 3300 Eger, Harangláb utca 18.</p>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Telefon:</span>
+                        <a href="tel:+36203137994">06 20 / 313 - 7994</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Email:</span>
+                        <a href="mailto:mhk2@mhkauto.hu">mhk2@mhkauto.hu</a>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="label">Nyitvatartás:</span>
+                        <p>H-P: 8:00 - 17:00<br>SZ-V: Zárva</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="store-location">
-                <h3>Eger, Harangláb utcai Üzlet</h3>
-                <ul>
-                    <li><strong>📍</strong> 3300 Eger Harangláb utca út 18.</li>
-                    <li><strong>📞</strong> 06 20 / 313 - 7994</li>
-                    <li><strong>✉️</strong> mhk2@mhkauto.hu</li>
-                    <li><strong>🕒</strong> H-P 8:00 - 17:00 (SZ-V: Zárva)</li>
-                </ul>
+            <div class="form-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Név" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Üzenet" rows="6" required></textarea>
+                    <button type="submit" class="btn-primary-stylized">ÜZENET KÜLDÉSE</button>
+                </form>
             </div>
-        </div>
-        
-        <div class="content-right">
-            <form class="contact-form">
-                <input type="text" placeholder="Név" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Üzenet" rows="4" required></textarea>
-                <button type="submit" class="btn-primary-stylized">ÜZENET KÜLDÉSE</button>
-            </form>
+
         </div>
     </main>
-
-    <footer class="quality-banner">
-        <div class="quality-item">
-            <span class="icon">⚙️</span>
-            <h4>MINŐSÉG</h4>
-            <p>Elleneszőtt termékek</p>
-        </div>
-        <div class="quality-item">
-            <span class="icon">🚚</span>
-            <h4>GYORS KISZÁLLÍTÁS</h4>
-            <p>Országesen</p>
-        </div>
-        <div class="quality-item">
-            <span class="icon">🛡️</span>
-            <h4>MEGBÍZHATÓSÁG</h4>
-            <p>2014 óta velettek</p>
-        </div>
-    </footer>
 
 </body>
 </html>
