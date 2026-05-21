@@ -19,7 +19,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
-    /* Csökkentettük a felső sáv alatti távolságot 70px-re */
     padding-top: 70px; 
     padding-bottom: 80px; 
 }
@@ -34,7 +33,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    /* Csökkentettük a magasságot 90px-ről 70px-re */
     height: 70px;
     background-color: #ffffff; 
     display: flex;
@@ -47,9 +45,8 @@ header {
 }
 
 .header-logo {
-    /* Új, logóhoz illő betűtípus: */
     font-family: 'Alfa Slab One', serif;
-    font-size: 22px; /* Kicsit igazítva a vastagabb font miatt */
+    font-size: 22px; 
     color: #111111; 
     letter-spacing: 2px;
 }
@@ -229,17 +226,21 @@ body.dark-theme {
    ========================================= */
 body.light-theme {
     background-color: #f8fafc;
+    /* Halvány tépett/merített papír textúra hozzáadása */
+    background-image: url('https://www.transparenttextures.com/patterns/textured-paper.png');
     color: #0f172a;
     position: relative;
     overflow-x: hidden; 
 }
 
+/* KÖZÉPRE ZÁRT, HALVÁNY VÍZJEL LOGÓ */
 .bg-graphic {
     position: fixed;
-    right: -100px; 
-    bottom: 15%;
-    height: 75vh;
-    opacity: 0.05; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height: 70vh;
+    opacity: 0.04; /* Nagyon finom, elegáns halványság */
     filter: grayscale(100%); 
     z-index: 0;
     pointer-events: none;
@@ -254,8 +255,11 @@ body.light-theme {
     z-index: 5;
 }
 
+/* FINOMÍTOTT CÍMSOR VASTAGSÁG */
 .page-title {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Kicsit visszafogottabb méret */
+    font-weight: 400; /* Letiltjuk a böngésző mesterséges "bold" effektjét */
+    letter-spacing: 3px;
     margin-bottom: 50px;
     text-align: center;
     position: relative;
@@ -519,16 +523,4 @@ body.light-theme {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 10px;
-        height: auto;
-        padding: 10px 5%;
-    }
-    body {
-        /* Felső rész növelve a mobil duplasoros fejléc miatt */
-        padding-top: 100px; 
-    }
-    nav a {
-        margin: 0 10px;
-        font-size: 14px;
-    }
-}
+        gap:
