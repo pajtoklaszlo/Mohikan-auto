@@ -102,3 +102,69 @@ nav a.active {
     max-width: 500px; /* Szabályozza, hogy mekkora legyen a logó */
     border-radius: 50%; /* Opcionális, ha a kép sarkai látszanának */
 }
+/* --- VILÁGOS TÉMA (KAPCSOLAT OLDAL) --- */
+body.light-theme {
+    background-color: #f4f4f4; /* Világosszürke háttér */
+    color: #111111;
+}
+
+/* Világos témájú fejléc sötét szöveggel */
+.header-light .header-logo, 
+.header-light nav a {
+    color: #111111;
+}
+
+.header-light nav a:hover {
+    color: #555555;
+}
+
+.header-light nav a.active {
+    border-bottom: 2px solid #111111; /* Fekete aláhúzás */
+}
+
+/* --- KAPCSOLAT INFÓK (Bal oldal) --- */
+.contact-info ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.contact-info li {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Távolság az ikon és a szöveg között */
+}
+
+/* --- ŰRLAP (Jobb oldal) --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Ne legyen túl széles az űrlap */
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #6a4c8c; /* Fókuszáláskor lila keret */
+}
+
+.contact-form button {
+    align-self: flex-start; /* A gomb ne nyúljon el teljes szélességben */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
